@@ -1,0 +1,51 @@
+Conversão
+
+
+- Number.parseInt(x)
+   .Converte para inteiro
+
+- Number.parseFloat(x)
+   .Converte para float
+
+- Number(x)
+   .converte para number
+
+- String(x)
+   .Converte para string
+
+- x.toString()
+   Converte para string
+
+
+
+Concatenção
+
+
+Pode ser feito usando... 
+"+ "
+ou 
+"${x}" (template strings) usando crase para determinar a string
+
+
+
+Funções de String
+
+- x.length 
+   .Quantos caracteres a string tem
+- x.to UpperCase()
+   .Transforma tudo em maiúsculas
+- s.toLowerCase()
+   .Transforma tudo em minúsculas
+
+
+
+
+Formatação de números
+
+
+- n1.toFixed(2)
+   .Altera a casa decimal
+- n1.toFixed(2).replace('.',',')
+   .Troca o sinal
+- n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+   .Transforma em Real
