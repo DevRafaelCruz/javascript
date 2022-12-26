@@ -6,7 +6,14 @@ function contar(){
     var restxt = document.getElementById('restxt')
     restxt.innerHTML = ('Contando...')
 
+    
+
     for(inicio;inicio<=fim;inicio+=passo){
-        res.innerHTML+=(inicio + ',') 
+        res.innerHTML+=(inicio + `👉`)
     }
+    res.innerHTML+=(`🏁`)
+    res.innerHTML+=('<br>')
+    res.innerHTML+=('<br>')
+    res.innerHTML+=('<br>')
+    res.innerHTML+=('<br>')
 } 

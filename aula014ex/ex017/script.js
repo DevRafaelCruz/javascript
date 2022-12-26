@@ -7,4 +7,9 @@ function gerarTabuada(){
         res.innerHTML+=(`${num} x ${i} = ${n}`)
         res.innerHTML+=('<br>')
     }
+
+    res.innerHTML+=('<br>')
+    res.innerHTML+=('<br>')
+    res.innerHTML+=('<br>')
+    res.innerHTML+=('<br>')
 }
