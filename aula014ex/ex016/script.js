@@ -1,19 +1,31 @@
 function contar(){
-    var inicio = Number(document.getElementById('idinicio').value)
-    var fim = Number(document.getElementById('idfim').value)
-    var passo = Number(document.getElementById('idpasso').value)
+    var inicio = document.getElementById('idinicio')
+    var fim = document.getElementById('idfim')
+    var passo = document.getElementById('idpasso')
     var res = document.getElementById('res')
     var restxt = document.getElementById('restxt')
-    restxt.innerHTML = ('Contando...')
+    restxt.innerHTML = 'Contando: '
 
-    
+    if(inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+        alert('[Erro] Faltam dados!')
+    }else{
+        restxt.innerHTML = 'Contando: '
 
-    for(inicio;inicio<=fim;inicio+=passo){
-        res.innerHTML+=(inicio + `👉`)
+        var i = Number(inicio.value)
+        var f = Number(fim.value)
+        var p = Number(passo.value)
+
+        if(i<f){
+            for(i;i<=f;i+=p){
+                res.innerHTML+= `${i} \u{1F449}`
+            }
+        }else{
+            for(i;i>=f;i-=p){
+                res.innerHTML+= `${i} \u{1F449}`
+            }
+        }
+        res.innerHTML+=`🏁`
+
+        
     }
-    res.innerHTML+=(`🏁`)
-    res.innerHTML+=('<br>')
-    res.innerHTML+=('<br>')
-    res.innerHTML+=('<br>')
-    res.innerHTML+=('<br>')
 } 
