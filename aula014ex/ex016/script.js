@@ -3,18 +3,19 @@ function contar(){
     var fim = document.getElementById('idfim')
     var passo = document.getElementById('idpasso')
     var res = document.getElementById('res')
-    var restxt = document.getElementById('restxt')
-    restxt.innerHTML = 'Contando: '
 
     if(inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
         alert('[Erro] Faltam dados!')
+        res.innerHTML = 'Impossível contar'
     }else{
-        restxt.innerHTML = 'Contando: '
-
+        res.innerHTML = 'Contando: <br>'
         var i = Number(inicio.value)
         var f = Number(fim.value)
         var p = Number(passo.value)
 
+        if(p<=0){
+            alert('Passo inválido! Considerando PASSO 1')
+        }
         if(i<f){
             for(i;i<=f;i+=p){
                 res.innerHTML+= `${i} \u{1F449}`
